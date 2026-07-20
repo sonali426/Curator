@@ -1,26 +1,26 @@
 # ModernizeBench / The Eval Ledger
 
-A public, evaluation-first project for measuring multi-agent software-modernization workflows. The site contains the ModernizeBench product design, a deep learning curriculum, and **The Eval Ledger**, a daily agent-evaluation learning publication.
+ModernizeBench is an evaluation and experimentation platform for reliable agentic software engineering. The first benchmark evaluates multi-agent legacy modernization from PHP to Spring Boot and React; the reusable product is the task, trace, grader, reliability, safety, and experiment infrastructure beneath it.
 
 ## Public site
 
-- GitHub Pages target: https://sonali426.github.io/Curator/
-- Immediate branch preview: https://raw.githack.com/sonali426/Curator/master/site/index.html
-
-The branch preview reflects updates from `master` within a few minutes. The GitHub Pages workflow publishes the `site/` directory after Pages is enabled for this repository.
-
-## Daily editorial policy
-
-Every edition is classified as `CRITICAL`, `HIGH`, `MEDIUM`, or `LEARNING ONLY`. Items that materially affect ModernizeBench are highlighted and name the affected component and a concrete design response. When no major release appears, the edition teaches one durable evaluation concept and includes a learn-by-building exercise.
-
-At 10:00 AM IST each day, the Daily Eval Ledger research watch checks primary sources and prepends a new issue to `site/assets/data.js`.
+- GitHub Pages: https://sonali426.github.io/Curator/
+- Repository: https://github.com/sonali426/Curator
 
 ## Site structure
 
-- `site/index.html` — public page
-- `site/assets/data.js` — newsletter entries and curriculum
-- `.github/workflows/pages.yml` — GitHub Pages deployment
-- `NEWSLETTER_ENTRY_TEMPLATE.md` — editorial schema
+- `site/index.html` — concise curiosity-building homepage
+- `site/project/index.html` — complete business and technical project brief
+- `site/learn/index.html` — sequenced curriculum map
+- `site/learn/module.html?id=<module>` — dedicated detail page for each of 27 modules
+- `site/ledger/index.html` — daily Eval Ledger publication
+- `site/assets/data.js` — newsletter and curriculum content
+- `site/assets/styles.css` — shared design system
+- `site/assets/site.js` — rendering, filtering, navigation, and theme behavior
+
+## Editorial policy
+
+Every Eval Ledger edition is classified as `CRITICAL`, `HIGH`, `MEDIUM`, or `LEARNING ONLY`. Material items name the affected ModernizeBench component and a concrete design response. Quiet days teach one durable evaluation concept and include a learn-by-building exercise.
 
 ## Local preview
 
@@ -28,4 +28,4 @@ At 10:00 AM IST each day, the Daily Eval Ledger research watch checks primary so
 python -m http.server 8080 --directory site
 ```
 
-Then open `http://localhost:8080`.
+Open `http://localhost:8080`.
