@@ -14,13 +14,16 @@ ModernizeBench is an evaluation and experimentation platform for reliable agenti
 - `site/learn/index.html` — sequenced curriculum map
 - `site/learn/module.html?id=<module>` — dedicated detail page for each of 27 modules
 - `site/ledger/index.html` — daily Eval Ledger publication
-- `site/assets/data.js` — newsletter and curriculum content
+- `site/assets/data.js` — newsletter entries and project metadata
+- `site/assets/learning-1.js` through `learning-4.js` — detailed curriculum modules
 - `site/assets/styles.css` — shared design system
 - `site/assets/site.js` — rendering, filtering, navigation, and theme behavior
 
 ## Editorial policy
 
 Every Eval Ledger edition is classified as `CRITICAL`, `HIGH`, `MEDIUM`, or `LEARNING ONLY`. Material items name the affected ModernizeBench component and a concrete design response. Quiet days teach one durable evaluation concept and include a learn-by-building exercise.
+
+The Daily Eval Ledger automation runs at 10:00 AM IST, prepends only the newsletter entry in `site/assets/data.js`, preserves the project metadata and curriculum files, and publishes through the repository workflow.
 
 ## Local preview
 
