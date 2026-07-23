@@ -1,6 +1,23 @@
 window.MODERNIZEBENCH_DATA = {
   "newsletter": [
     {
+      "id": "presence-continuous-evals-2026-07-23",
+      "date": "2026-07-23",
+      "label": "Product and operations",
+      "category": "research",
+      "relevance": "HIGH",
+      "material": true,
+      "affected": "Evaluation lifecycle, production feedback, regression gates, and governance",
+      "title": "OpenAI Presence turns production failures into a controlled evaluation-and-improvement loop",
+      "summary": "OpenAI introduced Presence on July 22, 2026 as an enterprise agent deployment system that combines policies, approved actions, simulations, graders, guardrails, escalation rules, production quality signals, and a Codex-assisted improvement process. Before launch, teams test common, edge, and higher-risk scenarios; after launch, production sessions and escalations reveal gaps, proposed updates are compared against the production version, and humans approve controlled rollout.",
+      "impact": "The material lesson for ModernizeBench is that offline benchmark scores are only the beginning of an evaluation lifecycle. Real deployments create new intents, policy changes, escalation patterns, and failure modes that should become versioned regression tasks. However, production-derived cases must be redacted, reviewed, deduplicated, and separated from sealed holdouts so operational learning does not contaminate benchmark claims.",
+      "action": "Add a closed-loop evaluation pipeline: ingest approved production or pilot failures into a quarantine queue; attach provenance, privacy classification, severity, and affected capability; reproduce each failure in a sanitized Task Pack; add a deterministic or rubric grader; run candidate workflow changes against both the new case and the existing regression suite; require human approval before promotion; and keep public benchmark, internal regression, and sealed holdout datasets physically and logically separate.",
+      "exercise": "Create a miniature failure-to-eval pipeline for one modernization workflow. Start with three synthetic incidents—missed authorization rule, incorrect reuse decision, and unnecessary human escalation. Define the intake schema, redact sensitive context, convert each incident into a reproducible Task Pack, add one grader per incident, and produce a promotion report comparing the current workflow with one proposed fix.",
+      "urgency": "Design into the first production pilot",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-openai-presence/"
+    },
+    {
       "id": "eval-sandbox-escape-2026-07-22",
       "date": "2026-07-22",
       "label": "Security",
