@@ -1,6 +1,23 @@
 window.MODERNIZEBENCH_DATA = {
   "newsletter": [
     {
+      "id": "evaluation-claim-cards-2026-07-24",
+      "date": "2026-07-24",
+      "label": "Learning note",
+      "category": "learning",
+      "relevance": "LEARNING ONLY",
+      "material": false,
+      "affected": "Evaluation governance, result reporting, and benchmark comparability",
+      "title": "A benchmark score is meaningless until its evaluation claim is specified",
+      "summary": "Agent-evaluation results are often presented as a single percentage even though the measured system includes a model, reasoning configuration, harness, tools, safeguards, budgets, retries, environment, and grader implementation. OpenAI's guidance for trustworthy third-party evaluations recommends reporting the claim being tested, evaluation content, complete tested system, resource budget, elicitation method, and validity checks. Without those fields, two apparently comparable scores may answer different questions.",
+      "impact": "ModernizeBench should treat every published score as evidence for a bounded claim rather than as a universal measure of agent quality. A result can support a comparison between two workflow versions, estimate performance under one fixed budget, or test a specific safeguard—but it cannot automatically justify broader claims about autonomy, safety, or production readiness. Explicit claim metadata also makes harness effects, retries, human assistance, contamination checks, and grader limitations visible to stakeholders.",
+      "action": "Add a required Evaluation Claim Card to every experiment and public scorecard. Record: claim type; Task Pack distribution and version; model and reasoning settings; workflow and harness version; available tools and safeguards; token, turn, attempt, wall-clock, and cost budgets; human intervention policy; grader versions; validity checks for contamination, reward hacking, evaluation awareness, infrastructure failure, and refusals; known limitations; and the exact decision the result is intended to support. Reject publication when mandatory fields are missing.",
+      "exercise": "Take one existing ModernizeBench score such as '91/100 business fidelity' and write two different claim cards for it: one as a controlled comparison between workflow versions and one as a production-readiness claim. List the extra evidence required for the second claim, then implement a JSON Schema and CI check that blocks scorecard publication when claim type, tested-system configuration, budget, or validity checks are absent.",
+      "urgency": "Learning edition",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/trustworthy-third-party-evaluations-foundations/"
+    },
+    {
       "id": "presence-continuous-evals-2026-07-23",
       "date": "2026-07-23",
       "label": "Product and operations",
